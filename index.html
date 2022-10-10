@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+ 
+  <title>NaoRevele</title>
+</head>
+<body>
+  <h1>Decodificador NAO REVELE</h1>
+
+  <label for="entrada">NaoRevele</label>
+  <textarea name="textoEntrada" id="textoEntrada" title="anterro" placeholder="insira aqui seu texto"></textarea>
+
+  <label for="escolhaMetodo">Escolha o Método</label><br>
+  <select name="opcaoDeCodificacao" id="opcaoDcod" title="anterro">
+      <option value="Escolha">Escolha</option>
+      <option value="cCesar" id="cCesar">Cifra de César</option>
+      <option value="base" id="base64">Base64</option>
+  </select>
+
+  <div class="posicao">
+      <p>Posiçao da codificacao</p>
+      <input type="number" name="posicaoCesar" id="posicaoNumCesar" min="1" max="25" placeholder="posicao">
+  </div>
+
+  <div class="radioType">
+      <input type="radio" name="options" value="codificar" id="codificar">
+      <label for="codificar" id="labelCodificar">Codificar</label>
+
+      <input type="radio" name="options" value="decodificar" id="decodificar">
+      <label for="decodificar" id="labelDecodificar">Decodificar</label>
+  </div>
+
+  <div class="botaomsg">
+      <input type="submit" id="submit" value="Codificar!">
+      <input type="submit" id="submit" value="Decodificar!">
+  </div>
+
+  <label for="resultado" id="resultado"> </label>
+  <textarea name="textoSaida" id="textoSaida" title="anterro" placeholder="saida de texto"></textarea>
+  <script src="script.js"></script>
+</body>
+
+</html>
