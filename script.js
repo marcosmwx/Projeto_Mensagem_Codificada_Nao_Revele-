@@ -45,15 +45,16 @@ btndecodificar.addEventListener('click', function(){ // Evento onde muda o botao
 //Função de Cifra de Cesar
 function codCesar() {
     var elementoDaMensagem = textoEntrada.value
+    var mensagemMinuscula = elementoDaMensagem.toLowerCase();
     var transformarNumero = (Number(incremento.value) % 26);
     var mensagemCodificada = '';
   
-    for(var cont = 0; cont < elementoDaMensagem.length; cont++){
+    for(var cont = 0; cont < mensagemMinuscula.length; cont++){
        for(var c = 0; c < alfabeto.length; c++){
-         if (elementoDaMensagem[cont] == alfabeto[c]){
+         if (mensagemMinuscula[cont] == alfabeto[c]){
            mensagemCodificada += alfabeto [c + transformarNumero]
            break;
-       } else if (elementoDaMensagem[cont] == ' ') {
+       } else if (mensagemMinuscula[cont] == ' ') {
            mensagemCodificada += ' ';
            break;
        }
@@ -64,15 +65,16 @@ function codCesar() {
   //decrip Funcao Cifra de Cesar
       function decCesar() {
       var elementoDaMensagem = textoEntrada.value;
+      var mensagemMinuscula = elementoDaMensagem.toLowerCase()
       var transformarNumero = (Number(incremento.value) % 26);
       var mensagemCodificada = '';
     
-      for(var cont = 0; cont < elementoDaMensagem.length; cont++){
+      for(var cont = 0; cont < mensagemMinuscula.length; cont++){
          for(var c = alfabeto.length - 1; c >= 0; c--){
-           if(elementoDaMensagem[cont] == alfabeto[c]){
+           if(mensagemMinuscula[cont] == alfabeto[c]){
              mensagemCodificada += alfabeto [c - transformarNumero]
              break;
-         } else if (elementoDaMensagem[cont] == ' ') {
+         } else if (mensagemMinuscula[cont] == ' ') {
              mensagemCodificada += ' ';
              break;
          }
