@@ -1,10 +1,85 @@
-.campo{
-  width: 20%;
-  height: 150px;
+*{
+  padding: 0;
+  background: no-repeat;
+  background-size: 100%;
 }
-.container{
+body{
+  background-image: url("../img/Best .jpg");
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: aliceblue;
+}
+
+#codDecod{
+  margin: 2%;
+}
+.total {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px); /* Firefox nao compativel */
+  border-radius: 20px;
+  width:40%;
+  text-align: center;
+  box-shadow: 2px 5px 5px 3px rgb(0, 0, 0);
+  align-items: center;
+}
+
+#textoEntrada{
+  resize: none;
+  width: 20rem;
+  height: 5rem;
+}
+
+#textoSaida{
+  resize:none;
+  width: 20rem;
+  height: 5rem;
+}
+.total{
+  color:azure;
+}
+textarea{
+  border-radius: 10px;
+  margin: 10px;
+}
+textarea::placeholder {
+  text-align: center;
+  color: aliceblue;
+}
+textarea {
+  color: aliceblue;
   text-align: center;
 }
-#titulo {
+select{
+  color:aliceblue;
+  background-color: rgb(29, 29, 117);
+  margin: 5px;
+}
+#posicaoNumCesar {
+  background-color: none;
   text-align: center;
+  margin-right: 2%;
+  height: 2.5rem;
+  width: 5rem;
+  color: aliceblue;
+  margin-top: 10px;
+}
+#posicaoNumCesar::placeholder{
+  color: white;
+
+}
+#submit{
+  color: rgb(255, 255, 255);
+  background-color: none;
+  border-color:aliceblue;
+  width: 5rem;
+  height: 2rem;
+  margin: 10px;
+}
+.posicao{
+  display: none;
 }
