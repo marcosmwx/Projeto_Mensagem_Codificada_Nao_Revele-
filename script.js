@@ -1,14 +1,14 @@
-//Variáveis
-var alfabeto = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";//alfabeto para contagem
-var textoEntrada = document.getElementById('textoEntrada');// campo de texto de entrada
-var textoSaida = document.getElementById('textoSaida'); // campo de texto de saida
-var incremento = document.getElementById('posicaoNumCesar'); // qual o numero de incremento dentro da posicao
-var posicao = document.querySelector('.posicao'); // posicao da numeracao de cesar
-var opcaoDcod = document.getElementById('opcaoDcod'); //opcoes de qual codificacao ou decodificacao
-var seletor = document.querySelectorAll('.codigo');//codigo para utilizacao da decodificacao selecao
-var btncodificar = document.getElementById('codificar');//botao para codificar
-var btndecodificar = document.getElementById('decodificar');//botao para decodificar
-var submit = document.getElementById('submit');//botao para aplicar usos
+//Variáveis Let
+let alfabeto = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";//alfabeto para contagem
+let textoSaida = document.getElementById('textoSaida'); // campo de texto de saida
+let incremento = document.getElementById('posicaoNumCesar'); // qual o numero de incremento dentro da posicao
+let posicao = document.querySelector('.posicao'); // posicao da numeracao de cesar
+let opcaoDcod = document.getElementById('opcaoDcod'); //opcoes de qual codificacao ou decodificacao
+let seletor = document.querySelectorAll('.codigo');//codigo para utilizacao da decodificacao selecao
+let btncodificar = document.getElementById('codificar');//botao para codificar
+let btndecodificar = document.getElementById('decodificar');//botao para decodificar
+let submit = document.getElementById('submit');//botao para aplicar usos
+let textoEntrada = document.getElementById('textoEntrada');// campo de texto de entrada
 
 
 opcaoDcod.addEventListener('change', function() { //fucao para aparecer o incremento da cifra, fonte internet
@@ -32,25 +32,25 @@ btndecodificar.addEventListener('click', function(){ // Evento onde muda o botao
     
 //Função de Base64
     function codBase64() {
-        var mensagem = document.querySelector('#textoEntrada').value;
-        var codificado = btoa(mensagem);
+        let mensagem = document.querySelector('#textoEntrada').value;
+        let codificado = btoa(mensagem);
         return codificado;
 }
     function decBase64(){
-        var mensagem = document.querySelector('#textoEntrada').value;
-        var decodificado = atob(mensagem);
+        let mensagem = document.querySelector('#textoEntrada').value;
+        let decodificado = atob(mensagem);
         return decodificado;
 }
 
 //Função de Cifra de Cesar
 function codCesar() {
-    var elementoDaMensagem = textoEntrada.value
-    var mensagemMinuscula = elementoDaMensagem.toLowerCase();
-    var transformarNumero = (Number(incremento.value) % 26);
-    var mensagemCodificada = '';
+    let elementoDaMensagem = textoEntrada.value
+    let mensagemMinuscula = elementoDaMensagem.toLowerCase();
+    let transformarNumero = (Number(incremento.value) % 26);
+    let mensagemCodificada = '';
   
-    for(var cont = 0; cont < mensagemMinuscula.length; cont++){
-       for(var c = 0; c < alfabeto.length; c++){
+    for(let cont = 0; cont < mensagemMinuscula.length; cont++){
+       for(let c = 0; c < alfabeto.length; c++){
          if (mensagemMinuscula[cont] == alfabeto[c]){
            mensagemCodificada += alfabeto [c + transformarNumero]
            break;
@@ -64,13 +64,13 @@ function codCesar() {
   }
   //decrip Funcao Cifra de Cesar
       function decCesar() {
-      var elementoDaMensagem = textoEntrada.value;
-      var mensagemMinuscula = elementoDaMensagem.toLowerCase()
-      var transformarNumero = (Number(incremento.value) % 26);
-      var mensagemCodificada = '';
+      let elementoDaMensagem = textoEntrada.value;
+      let mensagemMinuscula = elementoDaMensagem.toLowerCase()
+      let transformarNumero = (Number(incremento.value) % 26);
+      let mensagemCodificada = '';
     
-      for(var cont = 0; cont < mensagemMinuscula.length; cont++){
-         for(var c = alfabeto.length - 1; c >= 0; c--){
+      for(let cont = 0; cont < mensagemMinuscula.length; cont++){
+         for(let c = alfabeto.length - 1; c >= 0; c--){
            if(mensagemMinuscula[cont] == alfabeto[c]){
              mensagemCodificada += alfabeto [c - transformarNumero]
              break;
@@ -101,5 +101,4 @@ function codCesar() {
             textoSaida.innerText = "Erro Complete os Campos"
         }
     });
-
 
